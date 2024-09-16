@@ -1,0 +1,38 @@
+# explain
+#CIFAR-10         60000 10      ./datasets
+#CIFAR-100        60000 20      ./datasets
+#STL-10           13000 10      ./datasets
+#ImageNet-10      13000 10
+#ImageNet-Dogs    19500 15      ./dataset
+#Tiny-ImageNet    100000 200    ./dataset
+
+# general
+seed: 42
+workers: 8
+dataset_dir:  "./datasets"    #"./datasets"
+
+# train options
+dataset_size:  19500  #13000 #60000 #100000  19500
+class_num:   15   # 10  200  15   20
+batch_size: 128   #128
+test_batch_size: 500
+image_size: 224
+start_epoch: 0
+max_epochs: 1000
+#dataset: "CIFAR-10"   #  CIFAR-10
+
+
+# model options
+resnet: "ResNet34" # ResNet18 / ResNet34 / ResNet50
+feature_dim: 128
+model_path: "save/CIFAR-10"   # save/CIFAR-10   save/CIFAR-100   save/STL-10
+reload: False
+
+# loss options
+learning_rate:   0.0003        #0.000012    #0.00001    0.000008
+
+
+
+gamma_lr: 0.4
+
+
